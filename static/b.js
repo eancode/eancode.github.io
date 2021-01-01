@@ -119,21 +119,25 @@ function ck(f)
 	return false;	
 }
 
-$(function(){
 
-	function getJsonp(data)
-	{
-		if(data && data[0]){
-			var a0 = (data[0][0]);
-			alert(a0);
-			document.getElementById("more").innerHTML=u(a0);
-		}
-		else
-		{
-			document.getElementById("more").innerHTML="商品条码查询系统";
-		}
+
+
+function getJsonp(data)
+{
+	if(data && data[0]){
+		var a0 = (data[0][0]);
+		alert(a0);
+		document.getElementById("more").innerHTML=u(a0);
 	}
-	
+	else
+	{
+		document.getElementById("more").innerHTML="商品条码查询系统";
+	}
+}
+
+
+
+$(function(){
 	var url = base+"/x.json";
 	$.ajax({
 	    url: url,
@@ -142,10 +146,6 @@ $(function(){
 	    jsonp: 'callback',
 	    jsonpCallback: 'getJsonp'                              
 	});
-
-
-	
-
 });
 
 
