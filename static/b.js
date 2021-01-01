@@ -74,7 +74,7 @@ let z_json = function (data)
 		var a7 = u(data[0][7]);
 		var a8 = u(data[0][8]);
 		var a9 = en(r(data[0][9]));
-		var i = '<caption>检索结果</caption><tbody><tr><td>商品条码</td><td>'+a0+
+		var i = '<caption style="font-size:24px;">检索结果</caption><tbody><tr><td>商品条码</td><td>'+a0+
 						'</td><td align="right"><a class="vc" title="百度搜索该商品条码" href="https://www.baidu.com/s?wd='+a0+
 						'" target="_blank"><img src="static/baidu.png" width="26"></a> <a class="vc" title="360搜索该商品条码" href="https://www.so.com/s?q='+a0+
 						'" target="_blank"><img src="static/360.png" width="26"></a> <a class="vc" title="搜狗搜索该商品条码" href="https://www.sogou.com/web?query='+a0+
