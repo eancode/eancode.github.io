@@ -2,10 +2,6 @@ var base = "http://49.232.208.61:9191/getResource/public/jsonp/data";
 
 function search(c)
 {
-	if(location.href.startsWith("https"))
-	{
-		location.href="http://www.eancode.cn";
-	}
 	document.getElementById("ean_code").value = c; 
 	document.getElementById("submitbutton").click();
 }
@@ -132,7 +128,12 @@ let x_json = function(data)
 }
 
 $(function(){
-
+	
+	if(location.href.startsWith("https"))
+	{
+		location.href="http://www.eancode.cn";
+	}
+	
 	let url = base+"/x.json";
 	$.ajax({
 	    url: url,
