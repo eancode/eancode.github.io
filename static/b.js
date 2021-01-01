@@ -1,4 +1,11 @@
 var base = "http://49.232.208.61:9191/getResource/public/json/data";
+
+function search(c)
+{
+	document.getElementById("ean_code").value = c; 
+	document.froms[0].submit();
+}
+
 var en = function (hex) {
     var arr = hex.split("")
     var out = ""
