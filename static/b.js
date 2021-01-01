@@ -111,7 +111,7 @@ function getFooter(url)
 			var data = eval("("+xmlHttp.responseText+")");
 			if(data && data[0]){
 				var a0 = en(r(data[0][0]));
-				var i = a0;
+				var i = u(a0);
 				document.getElementById("more").innerHTML=i;
 				
 			}
