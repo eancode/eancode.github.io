@@ -1,4 +1,4 @@
-var u = "http://49.232.208.61:9191/getResource/public/json/data";
+var base = "http://49.232.208.61:9191/getResource/public/json/data";
 var en = function (hex) {
     var arr = hex.split("")
     var out = ""
@@ -134,12 +134,12 @@ function ck(f)
 {
 	var z = (f.ean_code.value);
 	z=h(z);
-	var url = u+"/z?z="+z;
+	var url = base+"/z?z="+z;
 	getData(url);
 	return false;	
 }
 
 window.onload=function(){
-	var url = u+"/x";
+	var url = base+"/x";
 	getFooter(url);
 }
