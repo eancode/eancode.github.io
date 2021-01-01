@@ -87,9 +87,9 @@ let z_json = function (data)
 						'</td></tr><tr><td>等级/颜色</td><td>'+a4+
 						'</td></tr><tr><td>规格/尺寸</td><td>'+a5+
 						'</td></tr><tr><td>包装/款式</td><td>'+a6+
+						'</td></tr><tr><td>单位</td><td>'+a7+
 						'</td></tr><tr><td>市场价</td><td>'+a8+
-						'</td></tr><tr><td>进货价</td><td>普通用户无法查看</td></tr><tr><td>单位</td><td>'+a7+
-						'</td></tr></tbody>';
+						'</td></tr><tr><td>进货价</td><td>普通用户无法查看</td></td></tr></tbody>';
 		document.getElementById("result").innerHTML=i;
 		
 	}
