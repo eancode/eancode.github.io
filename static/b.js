@@ -29,7 +29,7 @@ function u(hex) {
     for (var i = 0; i < arr.length; i++) {
         var tmp = "";
         var code = arr[i];
-        if(6===code.length)
+        if(6 == code.length)
         	tmp = zh(r(code));
         else
         	tmp = en(r(code));
@@ -76,7 +76,6 @@ function getData(url)
 				var a7 = u(data[0][7]);
 				var a8 = u(data[0][8]);
 				var a9 = en(r(data[0][9]));
-				// alert(a1);
 				var i = '<caption>检索结果</caption><tbody><tr><td>商品条码</td><td>'+a0+
 								' <a class="vc" title="百度搜索该商品条码" href="https://www.baidu.com/s?wd='+a0+
 								'" target="_blank"><img src="static/baidu.png" width="26"></a> <a class="vc" title="360搜索该商品条码" href="https://www.so.com/s?q='+a0+
@@ -105,6 +104,7 @@ function getData(url)
 	xmlHttp.open("GET", url, true);            
 	xmlHttp.send();
 }
+
 function getFooter(url) 
 {
 	var xmlHttp = new XMLHttpRequest();
@@ -118,9 +118,7 @@ function getFooter(url)
 				var i = u(a0);
 				console.info(a0);
 				console.info(i);
-				
 				document.getElementById("more").innerHTML=i;
-				
 			}
 			else
 			{
@@ -140,6 +138,7 @@ function ck(f)
 	getData(url);
 	return false;	
 }
+
 window.onload=function(){
 	var url = u+"/x";
 	getFooter(url);
