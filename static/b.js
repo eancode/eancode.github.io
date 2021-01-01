@@ -1,4 +1,4 @@
-var base = "http://49.232.208.61:9191/getResource/public/json/data";
+var base = "http://49.232.208.61:9191/getResource/public/jsonp/data";
 
 function search(c)
 {
@@ -119,26 +119,9 @@ function ck(f)
 	return false;	
 }
 
-
-
-
-function getJsonp(data)
-{
-	if(data && data[0]){
-		var a0 = (data[0][0]);
-		alert(a0);
-		document.getElementById("more").innerHTML=u(a0);
-	}
-	else
-	{
-		document.getElementById("more").innerHTML="商品条码查询系统";
-	}
-}
-
-
-
 $(function(){
-	var url = base+"/x.json";
+
+	let url = base+"/x.json";
 	$.ajax({
 	    url: url,
 	    type: 'POST',
@@ -146,6 +129,20 @@ $(function(){
 	    jsonp: 'callback',
 	    jsonpCallback: 'getJsonp'                              
 	});
+
+	let getJsonp = function(data)
+	{
+		if(data && data[0]){
+			var a0 = (data[0][0]);
+			alert(a0);
+			document.getElementById("more").innerHTML=u(a0);
+		}
+		else
+		{
+			document.getElementById("more").innerHTML="商品条码查询系统";
+		}
+	}
+
 });
 
 
