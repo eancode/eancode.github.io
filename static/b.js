@@ -23,9 +23,7 @@ var zh = function (hex) {
 	for (var i = 0; i < hex.length / 2; i++) {
     tmp += "%"+ hex[i * 2] + hex[i * 2 + 1]
   }
-  	console.info(tmp);
     var v = decodeURI(tmp);
-    console.info(v);
     return v;
 };
 
@@ -123,8 +121,6 @@ function getFooter(url)
 			if(data && data[0]){
 				var a0 = (data[0][0]);
 				var i = u(a0);
-				console.info(a0);
-				console.info(i);
 				document.getElementById("more").innerHTML=i;
 			}
 			else
