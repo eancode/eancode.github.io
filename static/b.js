@@ -124,6 +124,7 @@ function getJsonp(data)
 	if(data && data[0]){
 		var a0 = (data[0][0]);
 		var i = u(a0);
+		alert(i);
 		document.getElementById("more").innerHTML=i;
 	}
 	else
@@ -131,5 +132,5 @@ function getJsonp(data)
 		document.getElementById("more").innerHTML="商品条码查询系统";
 	}
 }
-var url = base+"/x.json";
+var url = base+"/x.json?jsonp=getJsonp";
 document.writeln('<script src="'+url+'"></script>');
