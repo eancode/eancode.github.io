@@ -135,13 +135,13 @@ $(function(){
 		}
 	}
 	
-	var url = base+"/x.json?jsonp=getJsonp";
+	var url = base+"/x.json";
 	$.ajax({
-	    url: url,   //江西电视台的url
-	    type: 'POST',                                        
-	    dataType: 'jsonp',                                  
-	    jsonp: 'getJsonp',
-	    jsonpCallback: 'list'                              
+	    url: url,
+	    type: 'POST',
+	    dataType: 'jsonp',
+	    jsonp: 'callback',
+	    jsonpCallback: 'getJsonp'                              
 	});
 
 
