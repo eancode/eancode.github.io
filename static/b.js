@@ -119,7 +119,6 @@ let x_json = function(data)
 {
 	if(data && data[0]){
 		var a0 = (data[0][0]);
-		alert(a0);
 		document.getElementById("more").innerHTML=u(a0);
 	}
 	else
