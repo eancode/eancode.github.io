@@ -27,8 +27,12 @@ function u(hex) {
     var arr = hex.split(",");
     var out = ""
     for (var i = 0; i < arr.length; i++) {
-    		console.info(r(arr[i]));
-        var tmp = zh(r(arr[i]));
+        var tmp = "";
+        var code = arr[i];
+        if(6===code.length)
+        	tmp = zh(r(code));
+        else
+        	tmp = en(r(code));
         out += tmp;
     }
     return out;
