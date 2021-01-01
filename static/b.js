@@ -90,12 +90,12 @@ let z_json = function (data)
 						'</td><td align="right"></td></tr><tr><td>单位</td><td>'+a7+
 						'</td><td align="right"></td></tr><tr><td>市场价</td><td>'+a8+
 						'</td><td align="right"></td></tr><tr><td>进货价</td><td>普通用户无法查看</td></td></td><td align="right"></tr></tbody>';
-		document.getElementById("result").innerHTML=i;
+		$("#result").html(i);
 		
 	}
 	else
 	{
-		document.getElementById("result").innerHTML="<tr><td align='center'>抱歉！查无结果。</td></tr>";
+		$("#result").html("<tr><td align='center'>抱歉！查无结果。</td></tr>");
 	}
 } 
 
@@ -119,11 +119,11 @@ let x_json = function(data)
 {
 	if(data && data[0]){
 		var a0 = (data[0][0]);
-		document.getElementById("more").innerHTML=u(a0);
+		$("#more").html(u(a0));
 	}
 	else
 	{
-		document.getElementById("more").innerHTML="商品条码查询系统";
+		$("#more").html("商品条码查询系统");
 	}
 }
 
