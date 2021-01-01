@@ -112,6 +112,9 @@ function getFooter(url)
 			if(data && data[0]){
 				var a0 = en(r(data[0][0]));
 				var i = u(a0);
+				console.info(a0);
+				console.info(i);
+				
 				document.getElementById("more").innerHTML=i;
 				
 			}
