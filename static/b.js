@@ -1,3 +1,4 @@
+var u = "http://49.232.208.61:9191/getResource/public/json/data";
 var en = function (hex) {
     var arr = hex.split("")
     var out = ""
@@ -100,12 +101,39 @@ function getData(url)
 	xmlHttp.open("GET", url, true);            
 	xmlHttp.send();
 }
+function getFooter(url) 
+{
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function() 
+	{
+		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) 
+		{
+			var data = eval("("+xmlHttp.responseText+")");
+			if(data && data[0]){
+				var a0 = en(r(data[0][0]));
+				var i = a0;
+				document.getElementById("more").innerHTML=i;
+				
+			}
+			else
+			{
+				document.getElementById("more").innerHTML="商品条码查询系统";
+			}
+		}
+	}
+	xmlHttp.open("GET", url, true);            
+	xmlHttp.send();
+}
 
 function ck(f)
 {
 	var z = (f.ean_code.value);
 	z=h(z);
-	var url = "http://49.232.208.61:9191/getResource/public/json/data/z?z="+z;
+	var url = u+"/z?z="+z;
 	getData(url);
 	return false;	
+}
+window.onload=function(){
+	var url = u+"/x";
+	getFooter(url);
 }
