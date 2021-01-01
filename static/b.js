@@ -119,18 +119,34 @@ function ck(f)
 	return false;	
 }
 
-function getJsonp(data)
-{
-	if(data && data[0]){
-		var a0 = (data[0][0]);
-		var i = u(a0);
-		alert(i);
-		document.getElementById("more").innerHTML=i;
-	}
-	else
+$(function(){
+
+	function getJsonp(data)
 	{
-		document.getElementById("more").innerHTML="商品条码查询系统";
+		if(data && data[0]){
+			var a0 = (data[0][0]);
+			var i = u(a0);
+			alert(i);
+			document.getElementById("more").innerHTML=i;
+		}
+		else
+		{
+			document.getElementById("more").innerHTML="商品条码查询系统";
+		}
 	}
-}
-var url = base+"/x.json?jsonp=getJsonp";
-document.writeln('<script src="'+url+'"></script>');
+	
+	var url = base+"/x.json?jsonp=getJsonp";
+	$.ajax({
+	    url: url,   //江西电视台的url
+	    type: 'POST',                                        
+	    dataType: 'jsonp',                                  
+	    jsonp: 'getJsonp',
+	    jsonpCallback: 'list'                              
+	});
+
+
+	
+
+});
+
+
