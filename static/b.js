@@ -125,9 +125,8 @@ $(function(){
 	{
 		if(data && data[0]){
 			var a0 = (data[0][0]);
-			var i = u(a0);
-			alert(i);
-			document.getElementById("more").innerHTML=i;
+			alert(a0);
+			document.getElementById("more").innerHTML=u(a0);
 		}
 		else
 		{
