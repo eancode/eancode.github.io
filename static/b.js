@@ -93,7 +93,7 @@ function getData(url)
 			}
 			else
 			{
-				document.getElementById("result").innerHTML="<tr><td>抱歉！查无结果。</td></tr>";
+				document.getElementById("result").innerHTML="<tr><td align='center'>抱歉！查无结果。</td></tr>";
 			}
 		}
 	}
