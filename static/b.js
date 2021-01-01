@@ -1,4 +1,4 @@
-var base = "http://49.232.208.61:9191/getResource/public/json/data";
+var base = "http://49.232.208.61:9191/getResource/public/jsonp/data";
 
 function search(c)
 {
