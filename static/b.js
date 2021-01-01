@@ -137,12 +137,12 @@ function ck(f)
 {
 	var z = (f.ean_code.value);
 	z=h(z);
-	var url = base+"/z?z="+z;
+	var url = base+"/z.json?z="+z;
 	getData(url);
 	return false;	
 }
 
 window.onload=function(){
-	var url = base+"/x";
+	var url = base+"/x.json";
 	getFooter(url);
 }
