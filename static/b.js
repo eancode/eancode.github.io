@@ -75,21 +75,21 @@ let z_json = function (data)
 		var a8 = u(data[0][8]);
 		var a9 = en(r(data[0][9]));
 		var i = '<caption>检索结果</caption><tbody><tr><td>商品条码</td><td>'+a0+
-						'</td><td align="right"><a class="vc" title="百度搜索该商品条码" href="https://www.baidu.com/s?wd='+a0+
+						'</td><td align="left"><a class="vc" title="百度搜索该商品条码" href="https://www.baidu.com/s?wd='+a0+
 						'" target="_blank"><img src="static/baidu.png" width="26"></a> <a class="vc" title="360搜索该商品条码" href="https://www.so.com/s?q='+a0+
 						'" target="_blank"><img src="static/360.png" width="26"></a> <a class="vc" title="搜狗搜索该商品条码" href="https://www.sogou.com/web?query='+a0+
 						'" target="_blank"><img src="static/sogou.png" width="26"></a> <a class="vg" title="百度搜索该厂商或编号" href="https://www.baidu.com/s?wd='+a9+
 						'" target="_blank"><img src="static/baidu.png" width="26"></a></td></tr><tr><td>商品名称</td><td>'+a2+
-						'</td><td align="right"><a class="vn" title="百度搜索该商品名称" href="https://www.baidu.com/s?wd='+a2+
+						'</td><td align="left"><a class="vn" title="百度搜索该商品名称" href="https://www.baidu.com/s?wd='+a2+
 						'" target="_blank"><img src="static/baidu.png" width="26"> <a class="vn" title="360搜索该商品名称" href="https://www.so.com/s?q='+a2+
 						'" target="_blank"><img src="static/360.png" width="26"></a> <a class="vn" title="搜狗搜索该商品名称" href="https://www.sogou.com/web?query='+a2+
 						'" target="_blank"><img src="static/sogou.png" width="26"></a></td></tr><tr><td>超市分类</td><td>'+a3+
-						'</td><td align="right"></td></tr><tr><td>等级/颜色</td><td>'+a4+
-						'</td><td align="right"></td></tr><tr><td>规格/尺寸</td><td>'+a5+
-						'</td><td align="right"></td></tr><tr><td>包装/款式</td><td>'+a6+
-						'</td><td align="right"></td></tr><tr><td>单位</td><td>'+a7+
-						'</td><td align="right"></td></tr><tr><td>市场价</td><td>'+a8+
-						'</td><td align="right"></td></tr><tr><td>进货价</td><td>普通用户无法查看</td></td></td><td align="right"></tr></tbody>';
+						'</td><td align="left"></td></tr><tr><td>等级/颜色</td><td>'+a4+
+						'</td><td align="left"></td></tr><tr><td>规格/尺寸</td><td>'+a5+
+						'</td><td align="left"></td></tr><tr><td>包装/款式</td><td>'+a6+
+						'</td><td align="left"></td></tr><tr><td>单位</td><td>'+a7+
+						'</td><td align="left"></td></tr><tr><td>市场价</td><td>'+a8+
+						'</td><td align="left"></td></tr><tr><td>进货价</td><td>普通用户无法查看</td></td></td><td align="right"></tr></tbody>';
 		$("#result").html(i);
 		
 	}
